@@ -1,11 +1,11 @@
-import { set } from "mongoose";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [formdata, setFormdata] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.id]: e.target.value });
   };
@@ -28,7 +28,8 @@ export default function Signup() {
         setError(true);
         return;
       }
-      setError(false);
+      navigate("/sign-in");
+
     } catch (error) {
       setLoading(false);
       setError(true);
