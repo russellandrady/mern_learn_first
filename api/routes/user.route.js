@@ -1,6 +1,8 @@
 import express from "express";
-import { test } from "../controllers/user.controllers.js";//.js should be here. By default it doesn't come
+import { test, updateUser } from "../controllers/user.controllers.js";//.js should be here. By default it doesn't come
+import { verifyToken } from "../utils/verifyUser.js";
 const router = express.Router();
 
 router.get("/", test);
+router.post("/update/:id", verifyToken, updateUser);
  export default router;
