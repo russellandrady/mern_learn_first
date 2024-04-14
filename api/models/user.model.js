@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     },
     profilePicture: {
         type: String,
-        default: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fman-avatar-profile-picture-vector-illustration_26371636.htm&psig=AOvVaw1Dme_P7dVz-6DiFXAZP0H3&ust=1712982680212000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjS2PTru4UDFQAAAAAdAAAAABAE'
+        default: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671122.jpg?t=st=1713071266~exp=1713074866~hmac=252fb4fb4d5ab45e79784e893cf6b18da4f9217c6cf3186124460c9034ada2d2&w=1060'
     },
 }, { timestamps: true });
  const User = mongoose.model('User', userSchema);
